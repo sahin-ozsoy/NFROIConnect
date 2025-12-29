@@ -34,7 +34,7 @@
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
 % THE POSSIBILITY OF SUCH DAMAGE.
 
-function [source_roi_data, nPCAs, vx_] = roi_getact(source_voxel_data, ind_roi, nPCA, zscoreflag)
+function [source_roi_data, nPCAs, vx_] = roi_getactFeedback(source_voxel_data, ind_roi, nPCA, zscoreflag)
 
 if nargin < 2
     help roi_getact;
@@ -56,9 +56,10 @@ data_  = source_voxel_data(:, ind_roi, :);
 if zscoreflag
     data_(:, :) = zscore(data_(:, :));
 end
-if nPCA == 1
-    [source_roi_data, S, ~] = svds(double(data_(:, :)), 1); 
-    nPCAs = 1;
+if nPCA == 1    
+    [source_roi_data, S, ~] = svds(double(data_(:, :)), 1);     
+    source_roi_data = source_roi_data .* S;
+    nPCAs = 1;    
 elseif nPCA == 3
     [source_roi_data, ~, ~] = svds(double(data_(:, :)), 3); 
     nPCAs = 3;

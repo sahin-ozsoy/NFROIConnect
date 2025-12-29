@@ -78,7 +78,7 @@
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
 % THE POSSIBILITY OF SUCH DAMAGE.
 
-function [EEG, source_voxel_data] = roi_activity(EEG, varargin)
+function [EEG, source_voxel_data] = roi_activityOnlyActivity(EEG, varargin)
 
 if nargin < 2
     help roi_activity;
