@@ -10,8 +10,9 @@ persistent cortex;
 persistent leadfield;
 persistent P_eloreta;
 
+if fReset || isempty(cortex)
 
-if fReset
+    fReset = true;
     s = load('nfbcortex.mat');
     cortex = s.cortex;   
 
