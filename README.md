@@ -190,6 +190,12 @@ Then, proceed to use the  compute statistics and plot as above (in this case *co
 
 The test folder of ROIconnect contains a variety of scripts. Of interest is the *test_pipes/pipeline_connectivity.m* which runs connectivity analysis on the EEGLAB tutorial dataset. This script can easily be modified to process other data.
 
+# Version
+
+1.0 - Initial version
+
+1.1 - Adding new connectivity measures
+
 # References
 <a id="1">[1]</a> 
 Pellegrini, F., Delorme, A., Nikulin, V., & Haufe, S. (2023). Identifying good practices for detecting inter-regional linear functional connectivity from EEG. NeuroImage, 120218. [doi: 10.1016/j.neuroimage.2023.120218](https://doi.org/10.1016/j.neuroimage.2023.120218)

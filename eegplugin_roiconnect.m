@@ -36,7 +36,7 @@
 
 function vers = eegplugin_roiconnect(fig, trystrs, catchstrs)
 
-vers = 'roiconnect1.0';
+vers = 'roiconnect1.1';
 if nargin < 3
     error('eegplugin_roiconnect requires 3 arguments');
 end
